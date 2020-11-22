@@ -1,9 +1,14 @@
 @extends('layout.app')
- 
+
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}" >
+
+<!--Carousel-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
     <!--Special offer-->
-    <section id="main">
+    <div id="main">
         <div id="Carousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#Carousel" data-slide-to="0" class="actice"></li>
@@ -16,7 +21,7 @@
                         <div class="carousel-caption d-none d-sm-block text-right mb-5">
                             <h1 class="display-3 title-color">Headphones</h1>
                             <p class="lead">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat mauris. 
+                                Brand new comfortable headphones for listetning music or playing games
                             </p>
                             <a class="btn btn-color btn-lg" href="#">
                                 Open in store
@@ -27,9 +32,9 @@
                 <div class="carousel-item carousel-image-2">
                     <div class="container">
                         <div class="carousel-caption d-none d-sm-block text-right mb-5">
-                            <h1 class="display-3 title-color">Airpods</h1>
+                            <h1 class="display-3 title-color">AirPods</h1>
                             <p class="lead">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum. 
+                                These AirPods represent a completely new concept of wireless headphones
                             </p>
                             <a class="btn btn-color btn-lg" href="#">
                                 Open in store
@@ -42,7 +47,7 @@
                         <div class="carousel-caption d-none d-sm-block text-right mb-5">
                             <h1 class="display-3 title-color">PlayStation 4</h1>
                             <p class="lead">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque ex id.  
+                                PlayStation 4 Slim is a next-generation console that lets you fulfill all your dreams
                             </p>
                             <a class="btn btn-color btn-lg" href="#">
                                 Open in store
@@ -57,14 +62,13 @@
                     <span class="carousel-control-next-icon"></span>
                 </a>
             </div>
-        </div>  
-    </section> 
+        </div>
+    </div>
     <!--End of special offer-->
 
 
     <!--Categories-->
-    <div class="wid">
-    <section id="catogories">
+    <div id="catogories" class="wid">
         <div class="row">
             <div class="mx-auto text-center pt-5 pb-3">
                 <h1 class="text-capitalize">
@@ -73,53 +77,53 @@
             </div>
         </div>
         <div class="row">
-            <div class="category-list col-4">
+            <div class="category-list col-9 col-sm-8 col-md-4 col-lg-4">
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <span><i class="fas fa-laptop fa-2x pr-2"></i></span>
+                        <span class="d-none d-md-block"><i class="fas fa-laptop fa-2x pr-2"></i></span>
                         Notebooks
                     </li>
                     <li class="list-group-item">
-                        <span><i class="fas fa-mobile-alt fa-2x pl-2 pr-3"></i></span>
+                        <span class="d-none d-md-block"><i class="fas fa-mobile-alt fa-2x pl-2 pr-3"></i></span>
                         Mobile Phones
                     </li>
                     <li class="list-group-item">
-                        <span><i class="fas fa-tv fa-2x pr-2"></i></span>
+                        <span class="d-none d-md-block"><i class="fas fa-tv fa-2x pr-2"></i></span>
                         TV's
                     </li>
                     <li class="list-group-item">
-                        <span><i class="fas fa-tablet fa-2x pr-3"></i></span>
+                        <span class="d-none d-md-block"><i class="fas fa-tablet fa-2x pr-3"></i></span>
                         Monitors
                     </li>
                 </ul>
             </div>
-            <div class="category-list col-4 ">
+            <div class="category-list col-9 col-sm-8 col-md-4 col-lg-4">
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <span><i class="far fa-clock fa-2x pr-2"></i></span>
+                        <span class="d-none d-md-block"><i class="far fa-clock fa-2x pr-2"></i></span>
                         Smart Watches
                     </li>
                     <li class="list-group-item">
-                        <span><i class="fab fa-playstation fa-2x pr-2"></i></span>
+                        <span class="d-none d-md-block"><i class="fab fa-playstation fa-2x pr-2"></i></span>
                         Gaming devices
                     </li>
                     <li class="list-group-item">
-                        <span><i class="fa fa-camera fa-2x pr-2"></i></span>
+                        <span class="d-none d-md-block"><i class="fa fa-camera fa-2x pr-2"></i></span>
                         Photo, audio, video
                     </li>
                     <li class="list-group-item">
-                        <span><i class="fa fa-suitcase fa-2x pr-2"></i></span>
+                        <span class="d-none d-md-block"><i class="fa fa-suitcase fa-2x pr-2"></i></span>
                         Office
                     </li>
                 </ul>
             </div>
         </div>
-    </section>
     </div>
 
 
-    <!--Fresh products-->   
-    <section class="products py-5">
+
+    <!--Fresh products-->
+    <div class="products py-5">
         <div class="container">
             <div class="row">
                 <div class="col-10 mx-auto col-sm-6 text-center">
@@ -132,8 +136,8 @@
                 <div class="col-10 col-sm-8 col-lg-4 mx-auto my-3">
                     <div class="card">
                         <div class="img-container">
-                            <img src="/img/Featured/lens-3143893_640.jpg" alt="High zoom camera"
-                                class="card-img-top"/>
+                            <img src="./img/Featured/lens-3143893_640.jpg" alt="High zoom camera"
+                                 class="card-img-top"/>
                         </div>
                         <div class="card-body">
                             <div class="card-text d-flex justify-content-between text-capitalize">
@@ -151,8 +155,8 @@
                 <div class="col-10 col-sm-8 col-lg-4 mx-auto my-3">
                     <div class="card">
                         <div class="img-container">
-                            <img src="/img/Featured/earphones-791188_640.jpg" alt="Good quality earphones"
-                                class="card-img-top"/>
+                            <img src="./img/Featured/earphones-791188_640.jpg" alt="Good quality earphones"
+                                 class="card-img-top"/>
                         </div>
                         <div class="card-body">
                             <div class="card-text d-flex justify-content-between text-capitalize">
@@ -170,8 +174,8 @@
                 <div class="col-10 col-sm-8 col-lg-4 mx-auto my-3">
                     <div class="card">
                         <div class="img-container">
-                            <img src="/img/Featured/smart-watch-821559_640.jpg" alt="Smart Watch"
-                                class="card-img-top"/>
+                            <img src="./img/Featured/smart-watch-821559_640.jpg" alt="Smart Watch"
+                                 class="card-img-top"/>
                         </div>
                         <div class="card-body">
                             <div class="card-text d-flex justify-content-between text-capitalize">
@@ -188,11 +192,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
 
     <!--Deals ending soon-->
-    <section class="products py-5">
+    <div class="products py-5">
         <div class="container">
             <div class="row">
                 <div class="col-10 mx-auto col-sm-6 text-center">
@@ -205,8 +209,8 @@
                 <div class="col-10 col-sm-8 col-lg-4 mx-auto my-3">
                     <div class="card">
                         <div class="img-container">
-                            <img src="/img/Featured/imac-464737_640.jpg" alt="For the rich"
-                                class="card-img-top product-img"/>
+                            <img src="./img/Featured/imac-464737_640.jpg" alt="For the rich"
+                                 class="card-img-top product-img"/>
                         </div>
                         <div class="card-body">
                             <div class="card-text d-flex justify-content-between text-capitalize">
@@ -224,8 +228,8 @@
                 <div class="col-10 col-sm-8 col-lg-4 mx-auto my-3">
                     <div class="card">
                         <div class="img-container">
-                            <img src="/img/Featured/tv-627876_640.jpg" alt="LED TV"
-                                class="card-img-top"/>
+                            <img src="./img/Featured/tv-627876_640.jpg" alt="LED TV"
+                                 class="card-img-top"/>
                         </div>
                         <div class="card-body">
                             <div class="card-text d-flex justify-content-between text-capitalize">
@@ -243,8 +247,8 @@
                 <div class="col-10 col-sm-8 col-lg-4 mx-auto my-3">
                     <div class="card">
                         <div class="img-container">
-                            <img src="/img/slider-setup.jpg" alt="Setup for begginers"
-                                class="card-img-top"/>
+                            <img src="./img/slider-setup.jpg" alt="Setup for begginers"
+                                 class="card-img-top"/>
                         </div>
                         <div class="card-body">
                             <div class="card-text d-flex justify-content-between text-capitalize">
@@ -261,5 +265,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 @endsection

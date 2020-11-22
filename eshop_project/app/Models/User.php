@@ -40,4 +40,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    /**
+     * @var array|\Illuminate\Contracts\Foundation\Application|\Illuminate\Http\Request|mixed|string
+     */
 }

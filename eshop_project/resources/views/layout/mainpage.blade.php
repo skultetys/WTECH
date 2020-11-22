@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/2a724ada4f.js" crossorigin="anonymous"></script>
 
     <!--official fonts (poppins)-->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}" >
 
@@ -29,7 +29,7 @@
             <!--small devices-->
             <button class="navbar-toggler" data-toggle="collapse"
             data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>        
+                <span class="navbar-toggler-icon"></span>
             </button>
             <!--if navbar is collapsed, button shows up-->
             <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -52,11 +52,11 @@
     </nav>
     <!--End of nav-->
 
-    <!--Search-->   
+    <!--Search-->
     <header class="bg-black head">
         <div class="searchbar justify-content-between">
             <div class="input-group mx-auto">
-                <input class="form-control col-8 col-md-4 col-sm-8 mt-2 py-1 mx-auto amber-border search-window" 
+                <input class="form-control col-8 col-md-4 col-sm-8 mt-2 py-1 mx-auto amber-border search-window"
                         type="text" placeholder="Search" aria-label="Search">
             </div>
         </div>
@@ -79,7 +79,7 @@
                         <div class="carousel-caption d-none d-sm-block text-right mb-5">
                             <h1 class="display-3 title-color">Headphones</h1>
                             <p class="lead">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat mauris. 
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat mauris.
                             </p>
                             <a class="btn btn-color btn-lg" href="#">
                                 Open in store
@@ -92,7 +92,7 @@
                         <div class="carousel-caption d-none d-sm-block text-right mb-5">
                             <h1 class="display-3 title-color">Airpods</h1>
                             <p class="lead">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum. 
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum.
                             </p>
                             <a class="btn btn-color btn-lg" href="#">
                                 Open in store
@@ -105,7 +105,7 @@
                         <div class="carousel-caption d-none d-sm-block text-right mb-5">
                             <h1 class="display-3 title-color">PlayStation 4</h1>
                             <p class="lead">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque ex id.  
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque ex id.
                             </p>
                             <a class="btn btn-color btn-lg" href="#">
                                 Open in store
@@ -120,8 +120,8 @@
                     <span class="carousel-control-next-icon"></span>
                 </a>
             </div>
-        </div>  
-    </section> 
+        </div>
+    </section>
     <!--End of special offer-->
 
 
@@ -181,7 +181,7 @@
     </div>
 
 
-    <!--Fresh products-->   
+    <!--Fresh products-->
     <section class="products py-5">
         <div class="container">
             <div class="row">
@@ -362,7 +362,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!--Carousel-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
