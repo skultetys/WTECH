@@ -20,8 +20,8 @@
                        @if (Route::has('login'))
                             @auth
                             <li class="nav-item d-none d-sm-block">
-                                <a class="nav-link" href="{{ __('Dashboard') }}">Home</a>
-                            </li>                            
+                                <a class="nav-link" href="{{ __('dashboard') }}">Profile</a>
+                            </li>
                             @else
                             <li class="nav-item d-none d-sm-block">
                                 <a class="nav-link" href="{{ route('register') }}">Register</a>
