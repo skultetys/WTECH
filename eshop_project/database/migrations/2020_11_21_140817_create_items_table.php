@@ -21,7 +21,8 @@ class CreateItemsTable extends Migration
             $table->string('rating');
             $table->string('specs');
             $table->string('color');
-            $table->string('price');
+            $table->integer('price');
+            $table->string('category');
             $table->string('img');
 
         });

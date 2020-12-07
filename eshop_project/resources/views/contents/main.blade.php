@@ -80,40 +80,56 @@
             <div class="category-list col-9 col-sm-8 col-md-4 col-lg-4">
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <span class="d-none d-md-block"><i class="fas fa-laptop fa-2x pr-2"></i></span>
-                        Notebooks
+                        <a class="color-black" href="/list/notebooks">
+                            <span class="d-none d-md-block"><i class="fas fa-laptop fa-2x pr-2"></i></span>
+                            Notebooks
+                        </a>
                     </li>
                     <li class="list-group-item">
-                        <span class="d-none d-md-block"><i class="fas fa-mobile-alt fa-2x pl-2 pr-3"></i></span>
-                        Mobile Phones
+                        <a class="color-black" href="/list/mobile_phones">
+                            <span class="d-none d-md-block"><i class="fas fa-mobile-alt fa-2x pl-2 pr-3"></i></span>
+                            Mobile Phones
+                        </a>
                     </li>
                     <li class="list-group-item">
-                        <span class="d-none d-md-block"><i class="fas fa-tv fa-2x pr-2"></i></span>
-                        TV's
+                        <a class="color-black" href="/list/tvs">
+                            <span class="d-none d-md-block"><i class="fas fa-tv fa-2x pr-2"></i></span>
+                            TV's
+                        </a>
                     </li>
                     <li class="list-group-item">
-                        <span class="d-none d-md-block"><i class="fas fa-tablet fa-2x pr-3"></i></span>
-                        Monitors
+                        <a class="color-black" href="/list/monitors">
+                            <span class="d-none d-md-block"><i class="fas fa-tablet fa-2x pr-3"></i></span>
+                            Monitors
+                        </a>
                     </li>
                 </ul>
             </div>
             <div class="category-list col-9 col-sm-8 col-md-4 col-lg-4">
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <span class="d-none d-md-block"><i class="far fa-clock fa-2x pr-2"></i></span>
-                        Smart Watches
+                        <a class="color-black" href="/list/smartwatches">
+                            <span class="d-none d-md-block"><i class="far fa-clock fa-2x pr-2"></i></span>
+                            Smart Watches
+                        </a>
                     </li>
                     <li class="list-group-item">
-                        <span class="d-none d-md-block"><i class="fab fa-playstation fa-2x pr-2"></i></span>
-                        Gaming devices
+                        <a class="color-black" href="/list/gaming_devices">
+                            <span class="d-none d-md-block"><i class="fab fa-playstation fa-2x pr-2"></i></span>
+                            Gaming devices
+                        </a>
                     </li>
                     <li class="list-group-item">
-                        <span class="d-none d-md-block"><i class="fa fa-camera fa-2x pr-2"></i></span>
-                        Photo, audio, video
+                        <a class="color-black" href="/list/photo_audio_video">
+                            <span class="d-none d-md-block"><i class="fa fa-camera fa-2x pr-2"></i></span>
+                            Photo, audio, video
+                        </a>
                     </li>
                     <li class="list-group-item">
-                        <span class="d-none d-md-block"><i class="fa fa-suitcase fa-2x pr-2"></i></span>
-                        Office
+                        <a class="color-black" href="/list/office">
+                            <span class="d-none d-md-block"><i class="fa fa-suitcase fa-2x pr-2"></i></span>
+                            Office
+                        </a>
                     </li>
                 </ul>
             </div>

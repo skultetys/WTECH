@@ -12,6 +12,6 @@
         </main>
 
         <!-- Bootstrap core JavaScript -->
-        @include('layout.partials.footer');
+        @include('layout.partials.footer')
     </body>
 </html>

@@ -108,6 +108,20 @@ body {
     transform: scale(1.1);
 }
 
+.color-black {
+    color: black;
+}
+
+.color-black:hover {
+    background-color: black;
+    color: white;
+}
+
+.list-group-item:hover {
+    background-color: black;
+    color: white;
+}
+
 footer a{
     font-size: 14px;
     color: gray;

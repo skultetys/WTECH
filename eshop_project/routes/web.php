@@ -30,7 +30,9 @@ Route::get('/registration', 'RegistrationController@show');
 Route::post('/registration', 'RegistrationController@store');
 Route::get('/checkout', 'CheckoutController@show');
 Route::get('/checkout2', 'Checkout2Controller@show');
-Route::get('/list', 'ProductListController@show');
+Route::get('/list', 'ProductListController@index');
+Route::get('/list/color/{id}', 'ProductListController@show');
+Route::get('/list/{id}', 'ProductListController@category');
 Route::get('/cart', 'CartController@show');
 
 Route::resource('/', 'ItemController');
