@@ -4,6 +4,20 @@
 <!--Filters-->
 <link rel="stylesheet" type="text/css" href="{{ asset('css/list.css') }}" >
 
+
+<!--Search-->
+<div class="bg-black head">
+    <div class="searchbar">
+        <div class="input-group row">
+            <input class="form-control col-7 col-md-4 col-sm-8 mt-2 py-1 mx-auto amber-border search-window"
+                   type="text" name="query" placeholder="Search" aria-label="Search">
+            <a class="nav-link btn btn-color mt-1" href="#">
+                <i class="fas fa-shopping-cart fa-2x"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
 <div class="row justify-content-around ml-1 pt-5 pb-3 wid">
     <div class="dropdown">
         <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary black" data-target="#" href="/page.html">
@@ -29,10 +43,10 @@
             <li class="dropdown-submenu">
                 <a tabindex="-1" href="#" class="blc">Color</a>
                 <ul class="dropdown-menu">
-                    <li><a tabindex="-1" href="{{$url}}color=black" class="blc">Black</a></li>
-                    <li><a href="{{$url}}color=gray&" class="blc">Gray</a></li>
-                    <li><a href="{{$url}}color=white&" class="blc">White</a></li>
-                    <li><a href="{{$url}}color=green&" class="blc">Green</a></li>
+                    <li><a tabindex="-1" href="{{$url}}color=black&page=1" class="blc">Black</a></li>
+                    <li><a href="{{$url}}color=gray&page=1" class="blc">Gray</a></li>
+                    <li><a href="{{$url}}color=white&page=1" class="blc">White</a></li>
+                    <li><a href="{{$url}}color=green&page=1" class="blc">Green</a></li>
                 </ul>
             </li>
         </ul>
@@ -300,15 +314,23 @@
 
 <nav aria-label="Page navigation example">
     <ul class="pagination justify-content-center">
-        <li class="page-item disabled">
-            <a class="page-link clr-black" href="#" tabindex="-1">Previous</a>
-        </li>
-        <li class="page-item"><a class="page-link clr-black" href="#">1</a></li>
-        <li class="page-item"><a class="page-link clr-black" href="#">2</a></li>
-        <li class="page-item"><a class="page-link clr-black" href="#">3</a></li>
-        <li class="page-item">
-            <a class="page-link clr-black" href="#">Next</a>
-        </li>
+        @isset($page)
+            @if ($page > 1)
+                <li class="page-item">
+                    <a class="page-link clr-black" href={{$url}}page={{$page-1}} tabindex="-1">Previous</a>
+                </li>
+            @endif
+        @endisset
+        @for ($i = 1, $temp = $length; $temp > 0; $i++, $temp-=9)
+            <li class="page-item"><a class="page-link clr-black" href={{$url}}page={{$i}}>{{$i}}</a></li>
+        @endfor
+        @isset($page)
+            @if ($page < $length/9)
+                <li class="page-item">
+                    <a class="page-link clr-black" href={{$url}}page={{$page+1}}>Next</a>
+                </li>
+            @endif
+        @endisset
     </ul>
 </nav>
 

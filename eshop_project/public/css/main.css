@@ -19,6 +19,10 @@ body {
     padding-bottom: 15px;
 }
 
+.slim {
+    width: 99%;
+}
+
 .input-group.md-form.form-sm.form-1 input{
     border: 1px solid #bdbdbd;
     border-top-right-radius: 0.25rem;

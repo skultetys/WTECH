@@ -11,6 +11,7 @@ class ProductListController extends Controller
     function index()
     {
         $temp = "";
+        $page = request('page');
         $color = request('color');
         $brand = request('brand');
         $order = request('order');
@@ -24,26 +25,35 @@ class ProductListController extends Controller
         if (!(strlen($how) > 0)) {
             $how = "asc";
         }
-        $data = DB::select("select * from items where
-                color like '%$color%' order by $order $how");
+
+        $items = DB::table('items')->select('*')
+            ->where('color', 'like', '%' . $color . '%')
+            ->orderBy($order, $how)->get();
+
+        $data = DB::table('items')->select('*')
+            ->where('color', 'like', '%' . $color . '%')
+            ->orderBy($order, $how)->paginate(9);
 
         $url = url()->full();
-        if (strlen($color) > 0 || strlen($brand) > 0 || strlen($temp) > 0) {
+        if (strlen($color) > 0 || strlen($brand) > 0 || strlen($temp) > 0 || strlen($page) > 0) {
             $url .= "&";
         }
         else {
             $url .= "?";
         }
 
-        return view('contents.list', ['data' => $data, 'url' => $url]);
+        if (!(strlen($page) > 0)) {
+            $page = 1;
+        }
 
-        //$data =  DB::table('items')->get();
-        //return view('contents.list', ['data' => $data, 'url' => url()->current()]);
+        return view('contents.list', ['data' => $data, 'url' => $url,
+            'length' => count($items), 'page' => $page]);
     }
 
-    public function category($category)
+    public function category($category, Request $request)
     {
         $temp = "";
+        $page = request('page');
         $color = request('color');
         $brand = request('brand');
         $order = request('order');
@@ -57,19 +67,32 @@ class ProductListController extends Controller
         if (!(strlen($how) > 0)) {
             $how = "asc";
         }
-                                                                // and brand like '%$brand%'
-        $data = DB::select("select * from items where category like '%$category%' and
-                color like '%$color%' order by $order $how");
+
+                            // and brand like '%$brand%'
+        $items = DB::table('items')->select('*')
+            ->where([['category', 'like', '%' . $category  . '%'],
+                    ['color', 'like', '%' . $color . '%']])
+            ->orderBy($order, $how)->get();
+
+        $data = DB::table('items')->select('*')
+            ->where([['category', 'like', '%' . $category  . '%'],
+                ['color', 'like', '%' . $color . '%']])
+            ->orderBy($order, $how)->paginate(9);
 
         $url = url()->full();
-        if (strlen($color) > 0 || strlen($brand) > 0 || strlen($temp) > 0) {
+        if (strlen($color) > 0 || strlen($brand) > 0 || strlen($temp) > 0 || strlen($page)) {
             $url .= "&";
         }
         else {
             $url .= "?";
         }
 
-        return view('contents.list', ['data' => $data, 'url' => $url, 'category' => $category]);
+        if (!(strlen($page) > 0)) {
+            $page = 1;
+        }
+
+        return view('contents.list', ['data' => $data, 'url' => $url, 'category' => $category,
+            'length' => count($items), 'page' => $page]);
     }
 }
 

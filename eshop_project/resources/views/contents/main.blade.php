@@ -1,11 +1,24 @@
 @extends('layout.app')
 
 @section('content')
-<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}" >
 
+<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}" >
 <!--Carousel-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!--Search-->
+    <div class="bg-black head">
+        <div class="searchbar">
+            <div class="input-group row">
+                <input class="form-control col-7 col-md-4 col-sm-8 mt-2 py-1 mx-auto amber-border search-window"
+                       type="text" name="query" placeholder="Search" aria-label="Search">
+                <a class="nav-link btn btn-color mt-1" href="#">
+                    <i class="fas fa-shopping-cart fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!--Special offer-->
     <div id="main">
@@ -69,14 +82,14 @@
 
     <!--Categories-->
     <div id="catogories" class="wid">
-        <div class="row">
+        <div class="row slim">
             <div class="mx-auto text-center pt-5 pb-3">
                 <h1 class="text-capitalize">
                     Categories
                 </h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row slim">
             <div class="category-list col-9 col-sm-8 col-md-4 col-lg-4">
                 <ul class="list-group">
                     <li class="list-group-item">
@@ -136,6 +149,14 @@
         </div>
     </div>
 
+
+    <div class="row slim">
+        <div class="mx-auto text-center pt-5 pb-3">
+            <a href="/list">
+                <button type="button" class="btn btn-outline-dark">See all products</button>
+            </a>
+        </div>
+    </div>
 
 
     <!--Fresh products-->
