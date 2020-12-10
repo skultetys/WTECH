@@ -11,12 +11,23 @@
     <div class="bg-black head">
         <div class="searchbar">
             <div class="input-group row">
-                <input class="form-control col-7 col-md-4 col-sm-8 mt-2 py-1 mx-auto amber-border search-window"
-                       type="text" name="query" placeholder="Search" aria-label="Search">
+                <form class="form-control col-7 col-md-4 col-sm-8 mt-2 py-1 mx-auto" type="get" action="{{ url('/list/search') }}">
+                    <input class="no-border"
+                           type="text" name="query" placeholder="Search" aria-label="Search">
+                </form>
                 <a class="nav-link btn btn-color mt-1" href="#">
                     <i class="fas fa-shopping-cart fa-2x"></i>
                 </a>
             </div>
+            <!--
+            <div class="row slim">
+                <div class="mx-auto text-center pt-5 pb-3">
+                    <a href="/list/search">
+                        <button type="button" class="btn btn-outline-dark">See all products</button>
+                    </a>
+                </div>
+            </div>
+            -->
         </div>
     </div>
 

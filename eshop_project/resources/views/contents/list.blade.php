@@ -4,13 +4,13 @@
 <!--Filters-->
 <link rel="stylesheet" type="text/css" href="{{ asset('css/list.css') }}" >
 
-
-<!--Search-->
 <div class="bg-black head">
     <div class="searchbar">
         <div class="input-group row">
-            <input class="form-control col-7 col-md-4 col-sm-8 mt-2 py-1 mx-auto amber-border search-window"
-                   type="text" name="query" placeholder="Search" aria-label="Search">
+            <form class="form-control col-7 col-md-4 col-sm-8 mt-2 py-1 mx-auto" type="get" action="{{ url('/list/search') }}">
+                <input class="no-border"
+                       type="text" name="query" placeholder="Search" aria-label="Search">
+            </form>
             <a class="nav-link btn btn-color mt-1" href="#">
                 <i class="fas fa-shopping-cart fa-2x"></i>
             </a>
@@ -24,6 +24,12 @@
             Filter by <span class="caret"></span>
         </a>
         <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+            <li class="dropdown-submenu">
+                <a tabindex="-1" href="#" class="blc">Price</a>
+                <ul class="dropdown-menu">
+                    <li class="pl-1"><input type="number" min=0 size="1"> - <input type="number" min=1 size="1"></li>
+                </ul>
+            </li>
             <li class="dropdown-submenu">
                 <a tabindex="-1" href="#" class="blc">Category</a>
                 <ul class="dropdown-menu">
