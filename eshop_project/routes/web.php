@@ -34,8 +34,17 @@ Route::get('/list', 'ProductListController@index');
 Route::get('/list/search', 'ProductListController@search');
 Route::get('/list/{id}', 'ProductListController@category');
 Route::get('/cart', 'CartController@show');
+Route::get('/product/{id}', 'ProductController@show');
+Route::get('/product', 'ProductController@index');
 
+
+Route::get('cart', 'ProductController@cart');
+Route::get('add-to-cart/{id}', 'ProductController@addToCart');
+Route::patch('update-cart', 'ProductController@update');
+Route::delete('/remove-from-cart', 'ProductController@remove');
 Route::resource('/', 'ItemController');
+Route::get('checkout', 'ProductController@checkout');
+Route::get('checkoutnext', 'ProductController@checkoutnext');
 
  //Route::get('/product',  'App\Http\Controllers\ItemController')
 

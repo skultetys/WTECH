@@ -115,13 +115,13 @@
             <div class="col-10 col-sm-8 col-lg-4 mx-auto my-3">
                 <div class="card">
                     <div class="img-container">
-                        <img src="./.{{$item->img}}" class="card-img-top"/>
+                        <a href="/product/{{$item->id}}"><img src="./.{{$item->img}}" class="card-img-top"/></a>
                     </div>
                     <div class="card-body">
                         <div class="card-text d-flex justify-content-between text-capitalize">
-                            <h5>
+                            <h5><a href="/product/{{$item->id}}">
                                 {{$item->title}}
-                            </h5>
+                            </a></h5>
                             <span>
                             <i class="fas fa-euro-sign"></i>
                             {{$item->price}}

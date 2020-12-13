@@ -26,7 +26,7 @@ class CreateNewUser implements CreatesNewUsers
             'last_name' => ['required', 'string', 'max:255'],
             'password' => $this->passwordRules(),
         ])->validate();
-        $value = $input["inlineRadioOptions"] == 'true' ? 1 : 0;
+        $value = $input["inlineRadioOptions"] == 'true' ? 'Female' : 'Male';
         return User::create([
             'name' => $input['name'],
             'email' => $input['email'],

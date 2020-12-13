@@ -21,7 +21,7 @@ class RegistrationController extends Controller
         $customer->surname = request('surname');
         $customer->password = request('password');
         $customer->email = request('email');
-        $customer->gender = Input::get("inlineRadioOptions") == 'true' ? 1 : 0;
+        $customer->gender = Input::get("inlineRadioOptions") == 'true' ? Female : Male;
         $customer->birthdate = request('birthday');
         $user = Customer::create(request(['name', 'email', 'password']));
         auth()->login($user);
