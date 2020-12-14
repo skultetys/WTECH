@@ -41,9 +41,9 @@
             <li class="dropdown-submenu">
                 <a tabindex="-1" href="#" class="blc">Brand</a>
                 <ul class="dropdown-menu">
-                    <li><a tabindex="-1" href="#" class="blc">Sony</a></li>
-                    <li><a href="#" class="blc">Samsung</a></li>
-                    <li><a href="#" class="blc">Apple</a></li>
+                    <li><a tabindex="-1" href="{{$url}}brand=Sony&page=1" class="blc">Sony</a></li>
+                    <li><a href="{{$url}}brand=Samsung&page=1" class="blc">Samsung</a></li>
+                    <li><a href="{{$url}}brand=Apple&page=1" class="blc">Apple</a></li>
                 </ul>
             </li>
             <li class="dropdown-submenu">

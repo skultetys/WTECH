@@ -27,11 +27,13 @@ class ProductListController extends Controller
         }
 
         $items = DB::table('items')->select('*')
-            ->where('color', 'like', '%' . $color . '%')
+            ->where([['color', 'like', '%' . $color . '%'],
+                    ['brand', 'like', '%' . $brand . '%']])
             ->orderBy($order, $how)->get();
 
         $data = DB::table('items')->select('*')
-            ->where('color', 'like', '%' . $color . '%')
+            ->where([['color', 'like', '%' . $color . '%'],
+                    ['brand', 'like', '%' . $brand . '%']])
             ->orderBy($order, $how)->paginate(9);
 
         $url = url()->full();
@@ -68,15 +70,17 @@ class ProductListController extends Controller
             $how = "asc";
         }
 
-                            // and brand like '%$brand%'
+
         $items = DB::table('items')->select('*')
             ->where([['category', 'like', '%' . $category  . '%'],
-                    ['color', 'like', '%' . $color . '%']])
+                    ['color', 'like', '%' . $color . '%'],
+                    ['brand', 'like', '%' . $brand . '%']])
             ->orderBy($order, $how)->get();
 
         $data = DB::table('items')->select('*')
             ->where([['category', 'like', '%' . $category  . '%'],
-                ['color', 'like', '%' . $color . '%']])
+                ['color', 'like', '%' . $color . '%'],
+                ['brand', 'like', '%' . $brand . '%']])
             ->orderBy($order, $how)->paginate(9);
 
         $url = url()->full();
@@ -115,20 +119,20 @@ class ProductListController extends Controller
 
         $items = DB::table('items')->select('*')
             ->where([['title', 'ilike', '%' . $search_text  . '%'],
-                ['color', 'like', '%' . $color . '%'],/*
-                ['brand', 'like', '%' . $brand . '%']*/])
+                ['color', 'like', '%' . $color . '%'],
+                ['brand', 'like', '%' . $brand . '%']])
             ->orWhere([['description', 'ilike', '%' . $search_text  . '%'],
-                ['color', 'like', '%' . $color . '%'],/*
-                ['brand', 'like', '%' . $brand . '%']*/])
+                ['color', 'like', '%' . $color . '%'],
+                ['brand', 'like', '%' . $brand . '%']])
             ->orderBy($order, $how)->get();
 
         $data = DB::table('items')->select('*')
             ->where([['title', 'ilike', '%' . $search_text  . '%'],
-                ['color', 'like', '%' . $color . '%']/*,
-                ['brand', 'like', '%' . $brand . '%']*/])
+                ['color', 'like', '%' . $color . '%'],
+                ['brand', 'like', '%' . $brand . '%']])
             ->orWhere([['description', 'ilike', '%' . $search_text  . '%'],
-                ['color', 'like', '%' . $color . '%']/*,
-                ['brand', 'like', '%' . $brand . '%']*/])
+                ['color', 'like', '%' . $color . '%'],
+                ['brand', 'like', '%' . $brand . '%']])
             ->orderBy($order, $how)->paginate(9);
 
         $url = url()->full();
