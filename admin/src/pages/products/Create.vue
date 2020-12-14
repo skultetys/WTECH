@@ -67,7 +67,7 @@
 
 <script>
 import axios from 'axios'
-import { QSpinnerFacebook, QSpinnerGears } from 'quasar'
+
 export default {
   data () {
     return {
@@ -88,6 +88,10 @@ export default {
         {
           label: 'Samsung',
           value: 'Samsung'
+        },
+        {
+          label: 'Dell',
+          value: 'Dell'
         },
         {
           label: 'Apple',
@@ -115,43 +119,9 @@ export default {
     }
   },
   methods: {
-    show (options) {
-      this.$q.loading.show(options)
-      setTimeout(() => {
-        this.$q.loading.hide()
-      }, 3000)
-    },
-    noMessage () {
-      this.show()
-    },
-    customLoading () {
-      console.log('here')
-      this.show({
-        spinner: QSpinnerFacebook,
-        spinnerColor: 'amber',
-        spinnerSize: 140,
-        message: 'Some important process is in progress. Hang on...',
-        messageColor: 'orange'
-      })
-    },
-    withMessage () {
-      this.show({ message: 'Some important process is in progress. Hang on...' })
-    },
-    changeMessage () {
-      this.$q.loading.show({ message: 'First message. Gonna change it in 3 seconds...' })
-      setTimeout(() => {
-        this.show({
-          spinner: QSpinnerGears,
-          spinnerColor: 'amber',
-          message: 'Updated message'
-        })
-      }, 15000)
-    },
     onFileSelected (event) {
       this.productImg = String(event)
       this.productData.imgg = String(event)
-      console.log(event)
-      this.customLoading()
     },
     createProduct () {
       axios

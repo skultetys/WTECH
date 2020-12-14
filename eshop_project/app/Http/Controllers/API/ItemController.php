@@ -118,7 +118,6 @@ class ItemController extends Controller
     public function destroy(Item $product)
     {
         $product->delete();
-        // error handling is up to you!!! ;)
         return response()->json(['status'=>'success','msg' => 'Product deleted successfully']);
     }
 }

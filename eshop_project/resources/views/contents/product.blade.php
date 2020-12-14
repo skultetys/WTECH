@@ -45,7 +45,7 @@
                                 <i class="fa fa-star checked"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
-                        @elseif($item->rating == 4 )   
+                        @elseif($item->rating == 4 )
                                 <i class="fa fa-star checked"></i>
                                 <i class="fa fa-star checked"></i>
                                 <i class="fa fa-star checked"></i>
@@ -57,9 +57,9 @@
                                 <i class="fa fa-star checked"></i>
                                 <i class="fa fa-star checked"></i>
                                 <i class="fa fa-star checked"></i>
-                                    
+
                         @endif
-                        <span class="badge badge-dark">{{$item->rating}}</span> 
+                        <span class="badge badge-dark">{{$item->rating}}</span>
                     </div>
                 <div class="version-menu">
                     <select class="browser-default custom-select w-50">
@@ -67,7 +67,7 @@
                     </select>
                 </div>
 
-                <div class="add-to-cart">   
+                <div class="add-to-cart">
                     {!! Form::open(['url' =>'add-to-cart/'.$item->id, 'method' => 'POST']) !!}
                         <div class="form-group">
                             {{Form::number('q', 'value')}}
@@ -221,7 +221,7 @@
                                     @if(count($similar) > 1)
                                         @foreach($similar as $simitem)
                                             @if ($loop->iteration == 4)
-                                                @break 
+                                                @break
                                             @endif
                                             @if ($simitem->id == $item->id)
                                                 @continue

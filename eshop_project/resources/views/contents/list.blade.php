@@ -39,6 +39,11 @@
                     <li><a tabindex="-1" href="/list/office" class="blc">Office</a></li>
                     <li><a href="/list/photo_audio_video" class="blc">Audio</a></li>
                     <li><a href="/list/notebooks" class="blc">Notebooks</a></li>
+                    <li><a href="/list/monitors" class="blc">Monitors</a></li>
+                    <li><a href="/list/mobile_phones" class="blc">Mobiles</a></li>
+                    <li><a href="/list/tvs" class="blc">TV's</a></li>
+                    <li><a href="/list/smartwatches" class="blc">Smart Watches</a></li>
+                    <li><a href="/list/gaming_devices" class="blc">Gaming Devices</a></li>
                 </ul>
             </li>
             <li class="dropdown-submenu">
@@ -47,6 +52,7 @@
                     <li><a tabindex="-1" href="{{$url}}brand=Sony&page=1" class="blc">Sony</a></li>
                     <li><a href="{{$url}}brand=Samsung&page=1" class="blc">Samsung</a></li>
                     <li><a href="{{$url}}brand=Apple&page=1" class="blc">Apple</a></li>
+                    <li><a href="{{$url}}brand=Dell&page=1" class="blc">Dell</a></li>
                 </ul>
             </li>
             <li class="dropdown-submenu">

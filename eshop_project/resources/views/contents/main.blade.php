@@ -184,8 +184,10 @@
                 <div class="col-10 col-sm-8 col-lg-4 mx-auto my-3">
                     <div class="card">
                         <div class="img-container">
-                            <img src="./img/Featured/lens-3143893_640.jpg" alt="High zoom camera"
-                                 class="card-img-top"/>
+                            <a href="/product/1">
+                                <img src="./img/Featured/lens-3143893_640.jpg" alt="High zoom camera"
+                                     class="card-img-top"/>
+                            </a>
                         </div>
                         <div class="card-body">
                             <div class="card-text d-flex justify-content-between text-capitalize">
@@ -203,8 +205,10 @@
                 <div class="col-10 col-sm-8 col-lg-4 mx-auto my-3">
                     <div class="card">
                         <div class="img-container">
-                            <img src="./img/Featured/earphones-791188_640.jpg" alt="Good quality earphones"
-                                 class="card-img-top"/>
+                            <a href="/product/2">
+                                <img src="./img/Featured/earphones-791188_640.jpg" alt="Good quality earphones"
+                                     class="card-img-top"/>
+                            </a>
                         </div>
                         <div class="card-body">
                             <div class="card-text d-flex justify-content-between text-capitalize">
@@ -222,8 +226,10 @@
                 <div class="col-10 col-sm-8 col-lg-4 mx-auto my-3">
                     <div class="card">
                         <div class="img-container">
+                            <a href="/product/3">
                             <img src="./img/Featured/smart-watch-821559_640.jpg" alt="Smart Watch"
                                  class="card-img-top"/>
+                            </a>
                         </div>
                         <div class="card-body">
                             <div class="card-text d-flex justify-content-between text-capitalize">
