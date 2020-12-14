@@ -24,7 +24,7 @@
                                 <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none">
-                                    @csrf    
+                                    @csrf
                                 </form>
                             </li>
                             @else
@@ -40,28 +40,28 @@
                                <p class="title-color">Categories</p>
                            </li>
                            <li class="nav-item d-block d-sm-none pl-4">
-                               <a class="nav-link" href="#">Notebooks</a>
+                               <a class="nav-link" href="/list/notebooks">Notebooks</a>
                            </li>
                            <li class="nav-item d-block d-sm-none pl-4">
-                               <a class="nav-link" href="#">Mobile phones</a>
+                               <a class="nav-link" href="/list/mobile_phones">Mobile phones</a>
                            </li>
                            <li class="nav-item d-block d-sm-none pl-4">
-                               <a class="nav-link" href="#">TV's</a>
+                               <a class="nav-link" href="/list/tvs">TV's</a>
                            </li>
                            <li class="nav-item d-block d-sm-none pl-4">
-                               <a class="nav-link" href="#">Monitors</a>
+                               <a class="nav-link" href="/list/monitors">Monitors</a>
                            </li>
                            <li class="nav-item d-block d-sm-none pl-4">
-                               <a class="nav-link" href="#">Smart watches</a>
+                               <a class="nav-link" href="/list/smartwatches">Smart watches</a>
                            </li>
                            <li class="nav-item d-block d-sm-none pl-4">
-                               <a class="nav-link" href="#">Gaming devices</a>
+                               <a class="nav-link" href="/list/gaming_devices">Gaming devices</a>
                            </li>
                            <li class="nav-item d-block d-sm-none pl-4">
-                               <a class="nav-link" href="#">Photo, audio, video</a>
+                               <a class="nav-link" href="/list/photo_audio_video">Photo, audio, video</a>
                            </li>
                            <li class="nav-item d-block d-sm-none pl-4">
-                               <a class="nav-link" href="#">Office</a>
+                               <a class="nav-link" href="/list/office">Office</a>
                            </li>
                            <!-- If user is logged in, logout button is in menu-->
                            <li class="nav-item d-block d-sm-none d-block d-sm-none pt-4">
@@ -81,4 +81,3 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script> -->
 
-        

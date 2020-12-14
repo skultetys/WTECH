@@ -64,16 +64,9 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required|min:3',
-            'category' => 'required',
-            'img' => 'required',
-            'price' => 'required'
-        ]);
 
         $pieces = explode("\\", $request->imgg);
         $imgPath = "./img/All/";
-        error_log(count($pieces));
         $imgPath .= $pieces[2];
 
         $product = Item::create(['title' => $request->title, 'description' => $request->description,
