@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f40e74ad-36aa-43ab-a25b-68ddec0580f0" name="Default Changelist" comment="" />
+    <list default="true" id="f40e74ad-36aa-43ab-a25b-68ddec0580f0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../admin/quasar.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/quasar.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/pages/products/Create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/pages/products/Create.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/pages/products/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/pages/products/Index.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -205,7 +209,7 @@
       <workItem from="1607556469056" duration="7252000" />
       <workItem from="1607785037005" duration="847000" />
       <workItem from="1607870174142" duration="2979000" />
-      <workItem from="1607896823317" duration="12480000" />
+      <workItem from="1607896823317" duration="25448000" />
     </task>
     <servers />
   </component>

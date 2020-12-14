@@ -32,6 +32,11 @@
         <q-td key="name" :props="props">
           <span>{{ props.row.category }}</span>
         </q-td>
+    <!--    <q-td key="name" :props="props">
+          <span>
+            <img :src="'../eshop_project/public/img/.' + props.row.img">
+          </span>
+        </q-td> -->
         <q-td class="text-right">
           <div v-if="props.row.id == 'DELETED'">DELETED</div>
           <div v-else>
@@ -58,6 +63,7 @@ export default {
         { name: 'price', label: 'Price', field: 'price', sortable: false, align: 'left' },
         { name: 'rating', label: 'Rating', field: 'rating', sortable: false, align: 'left' },
         { name: 'category', label: 'Category', field: 'category', sortable: false, align: 'left' },
+        // { name: 'img', label: 'Image', field: 'img', sortable: false, align: 'left' },
         { name: 'actions', label: 'Actions', sortable: false, align: 'right' }
       ],
       selected: [],

@@ -4,66 +4,33 @@
         <q-card-title>Create new product</q-card-title>
         <q-card-main>
             <q-field :count="250">
-                <q-input float-label="Title" v-model="productName" max-length="250" />
+                <q-input float-label="Title" v-model="productTitle" max-length="250" />
             </q-field>
             <q-field>
-                <div class="q-pa-md">
-                    <q-btn-dropdown color="primary" label="Color" v-model="productColor">
-                    <q-list>
-                        <q-item clickable v-close-popup @click="onItemClick">
-                        <q-item-section>
-                            <q-item-label>Black</q-item-label>
-                        </q-item-section>
-                        </q-item>
-
-                        <q-item clickable v-close-popup @click="onItemClick">
-                        <q-item-section>
-                            <q-item-label>White</q-item-label>
-                        </q-item-section>
-                        </q-item>
-
-                        <q-item clickable v-close-popup @click="onItemClick">
-                        <q-item-section>
-                            <q-item-label>Gray</q-item-label>
-                        </q-item-section>
-                        </q-item>
-
-                        <q-item clickable v-close-popup @click="onItemClick">
-                        <q-item-section>
-                            <q-item-label>Green</q-item-label>
-                        </q-item-section>
-                        </q-item>
-                    </q-list>
-                    </q-btn-dropdown>
-                </div>
+                <q-input float-label="Color" v-model="productColor" max-length="250" />
             </q-field>
             <q-field>
-                <div class="q-pa-md">
-                    <q-btn-dropdown color="primary" label="Brand" v-model="productBrand">
-                    <q-list>
-                        <q-item clickable v-close-popup @click="onItemClick">
-                        <q-item-section>
-                            <q-item-label>Sony</q-item-label>
-                        </q-item-section>
-                        </q-item>
-
-                        <q-item clickable v-close-popup @click="onItemClick">
-                        <q-item-section>
-                            <q-item-label>Samsung</q-item-label>
-                        </q-item-section>
-                        </q-item>
-
-                        <q-item clickable v-close-popup @click="onItemClick">
-                        <q-item-section>
-                            <q-item-label>Apple</q-item-label>
-                        </q-item-section>
-                        </q-item>
-                    </q-list>
-                    </q-btn-dropdown>
-                </div>
+                <q-input float-label="Brand" v-model="productBrand" max-length="250" />
+<!--            <q-page padding class="docs-input row justify-center">
+                    <div>
+                        <q-select
+                            v-model="productBrand"
+                            :options="options"
+                        />
+                    </div>
+                </q-page> -->
             </q-field>
             <q-field>
-                <q-input float-label="Price" v-model="productTitle" max-length="250" />
+                <q-input float-label="Specs" v-model="productSpecs" max-length="250" />
+            </q-field>
+            <q-field>
+                <q-input float-label="Price" v-model="productPrice" max-length="6" />
+            </q-field>
+            <q-field>
+                <q-input float-label="Rating" v-model="productRating" max-length="3" />
+            </q-field>
+            <q-field>
+                <q-input float-label="Category" v-model="productCategory" max-length="50" />
             </q-field>
             <q-field :count="5000">
                 <q-input
@@ -74,9 +41,11 @@
                     rows="5"
                 />
             </q-field>
-            <q-field helper="Supported format: JPG, max. file size: 300KiB" class="q-mt-lg">
-                <q-uploader float-label="Images" multiple extensions=".jpg" auto-expand/>
+
+            <q-field>
+                <q-input type="file" @change="onFileSelected"/>
             </q-field>
+
         </q-card-main>
         <q-card-actions class="q-mt-md">
             <div class="row justify-end full-width docs-btn">
@@ -106,10 +75,18 @@ export default {
       productColor: '',
       productBrand: '',
       productPrice: '',
-      productCategory: ''
+      productCategory: '',
+      productImg: 'test123',
+      options: [
+        'Sony', 'Samsung', 'Apple'
+      ]
     }
   },
   methods: {
+    onFileSelected (event) {
+      this.productImg = String(event)
+      this.productData.imgg = String(event)
+    },
     createProduct () {
       axios
         .post(`http://127.0.0.1:8000/api/products`, this.productData)
@@ -132,8 +109,9 @@ export default {
         specs: this.productSpecs,
         color: this.productColor,
         brand: this.productBrand,
-        price: this.productPrice,
-        category: this.productCategory }
+        price: parseInt(this.productPrice),
+        category: this.productCategory,
+        imgg: this.productImg }
     }
   }
 }
