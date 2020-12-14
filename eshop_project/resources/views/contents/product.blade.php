@@ -26,26 +26,26 @@
 
 
                     <div class="rating">
-                        @if ($item->rating === 1 )
+                        @if ($item->rating == 1 )
                             <i class="fa fa-star checked"></i>
                             <i class="fa fa-star "></i>
                             <i class="fa fa-star "></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
 
-                        @elseif ($item->rating === 2 )
+                        @elseif ($item->rating == 2 )
                             <i class="fa fa-star checked"></i>
                             <i class="fa fa-star checked"></i>
                             <i class="fa fa-star "></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
-                        @elseif ($item->rating === 3 )
+                        @elseif ($item->rating == 3 )
                                 <i class="fa fa-star checked"></i>
                                 <i class="fa fa-star checked"></i>
                                 <i class="fa fa-star checked"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
-                        @elseif($item->rating === 4 )   
+                        @elseif($item->rating == 4 )   
                                 <i class="fa fa-star checked"></i>
                                 <i class="fa fa-star checked"></i>
                                 <i class="fa fa-star checked"></i>
@@ -63,16 +63,17 @@
                     </div>
                 <div class="version-menu">
                     <select class="browser-default custom-select w-50">
-                        <option selected>Choose version</option>
-                        <option value="1">{{$item->title}}</option>
+                        <option selected value="1">{{$item->title}}</option>
                     </select>
                 </div>
-                <div class="add-to-cart">
-                <a href="{{ url('add-to-cart/'.$item->id) }}">
-                    <button type="button" class="btn btn-dark">Add to cart</button>
-                </a>
-                    
-                    <input type='number' value="1">
+
+                <div class="add-to-cart">   
+                    {!! Form::open(['url' =>'add-to-cart/'.$item->id, 'method' => 'POST']) !!}
+                        <div class="form-group">
+                            {{Form::number('q', 'value')}}
+                            {{Form::button('Add to cart', ['class' => 'btn btn-dark', 'type' => 'submit'])}}
+                        </div>
+                    {!! Form::close() !!}
                 </div>
 
             </div>
