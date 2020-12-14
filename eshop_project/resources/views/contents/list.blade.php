@@ -11,7 +11,7 @@
                 <input class="no-border"
                        type="text" name="query" placeholder="Search" aria-label="Search">
             </form>
-            <a class="nav-link btn btn-color mt-1" href="#">
+            <a class="nav-link btn btn-color mt-1" href="{{ url('/cart') }}">
                 <i class="fas fa-shopping-cart fa-2x"></i>
             </a>
         </div>

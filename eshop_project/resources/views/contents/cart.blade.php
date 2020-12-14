@@ -54,7 +54,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
+                <div align="left" class="proceed-div">
+                    <button type="button" class="btn btn-dark" onclick="location.href='{{ '/' }}'">Back to shopping</button>
+                </div>
+            </div>
+            <div class="col-md-6">
                 <div align="right" class="proceed-div">
                     <button type="button" class="btn btn-dark" onclick="location.href='{{ url('checkout') }}'">Proceed to checkout</button>
                 </div>
