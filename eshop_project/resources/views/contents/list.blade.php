@@ -27,7 +27,10 @@
             <li class="dropdown-submenu">
                 <a tabindex="-1" href="#" class="blc">Price</a>
                 <ul class="dropdown-menu">
-                    <li class="pl-1"><input type="number" min=0 size="1"> - <input type="number" min=1 size="1"></li>
+                    <li><a tabindex="-1" href="{{$url}}pricemin=0&pricemax=99&page=1" class="blc">0-99</a></li>
+                    <li><a href="{{$url}}pricemin=100&pricemax=299&page=1" class="blc">100-299</a></li>
+                    <li><a href="{{$url}}pricemin=300&pricemax=699&page=1" class="blc">300-699</a></li>
+                    <li><a href="{{$url}}pricemin=700&pricemax=99999&page=1" class="blc">700+</a></li>
                 </ul>
             </li>
             <li class="dropdown-submenu">
@@ -64,6 +67,7 @@
         </a>
         <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
             <li><a tabindex="-1" href="{{$url}}order=title&how=asc" class="blc">Aplhabetically</a></li>
+            <li><a tabindex="-1" href="{{$url}}order=rating&how=asc" class="blc">Rating</a></li>
             <li><a tabindex="-1" href="{{$url}}order=price&how=asc" class="blc">Price ascending</a></li>
             <li><a tabindex="-1" href="{{$url}}order=price&how=desc" class="blc">Price descending</a></li>
         </ul>

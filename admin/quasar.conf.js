@@ -41,6 +41,7 @@ module.exports = function (ctx) {
     // framework: 'all' --- includes everything; for dev only!
     framework: {
       components: [
+        'QSelect',
         'QLayout',
         'QLayoutHeader',
         'QLayoutFooter',
@@ -89,6 +90,7 @@ module.exports = function (ctx) {
     ssr: {
       pwa: false
     },
+
     pwa: {
       // workboxPluginMode: 'InjectManifest',
       // workboxOptions: {},

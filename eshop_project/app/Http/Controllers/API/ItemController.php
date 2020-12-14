@@ -59,20 +59,20 @@ class ItemController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        // validations and error handling is up to you!!! ;)
-        /*
-        $request->validate([
-            'name' => 'required|min:3',
-            'description' => 'required',
-        ]);
-        */
 
-        $product = Item::create(['name' => $request->name, 'description' => $request->description]);
+        $pieces = explode("\\", $request->imgg);
+        $imgPath = "./img/All/";
+        $imgPath .= $pieces[2];
+
+        $product = Item::create(['title' => $request->title, 'description' => $request->description,
+            'rating' => $request->rating, 'specs' => $request->specs, 'color' => $request->color,
+            'brand' => $request->brand, 'price' => $request->price, 'category' => $request->category,
+            'img' => $imgPath]);
         return response()->json(['id' => $product->id]);
     }
 

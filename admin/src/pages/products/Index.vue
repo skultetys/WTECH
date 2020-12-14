@@ -32,6 +32,11 @@
         <q-td key="name" :props="props">
           <span>{{ props.row.category }}</span>
         </q-td>
+        <!--<q-td key="name" :props="props">
+          <span>
+            <img :src="'C:/wamp64/www/WTECH/eshop/WTECH/eshop_project/public/img/.' + props.row.img">
+          </span>
+        </q-td>-->
         <q-td class="text-right">
           <div v-if="props.row.id == 'DELETED'">DELETED</div>
           <div v-else>
@@ -58,6 +63,7 @@ export default {
         { name: 'price', label: 'Price', field: 'price', sortable: false, align: 'left' },
         { name: 'rating', label: 'Rating', field: 'rating', sortable: false, align: 'left' },
         { name: 'category', label: 'Category', field: 'category', sortable: false, align: 'left' },
+        // { name: 'img', label: 'Image', field: 'img', sortable: false, align: 'left' },
         { name: 'actions', label: 'Actions', sortable: false, align: 'right' }
       ],
       selected: [],
@@ -73,6 +79,9 @@ export default {
     }
   },
   methods: {
+    reloadPage () {
+      setTimeout(() => { window.location.reload() }, 2500)
+    },
     request ({ pagination }) {
       // QTable to "loading" state
       this.loading = true
@@ -113,6 +122,7 @@ export default {
           .then(() => {
             this.serverData[rowIndex].id = 'DELETED'
             this.$q.notify({ type: 'positive', timeout: 2000, message: 'The product has been deleted.' })
+            this.reloadPage()
           })
           .catch(error => {
             this.$q.notify({ type: 'negative', timeout: 2000, message: 'An error has been occured.' })
