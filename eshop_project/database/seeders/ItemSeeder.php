@@ -48,7 +48,7 @@ class ItemSeeder extends Seeder
             'color' => 'white',
             'brand' => 'Apple',
             'price' => 499,
-            'category' => 'smart_Watches',
+            'category' => 'smartwatches',
             'img' => './img/Featured/smart-watch-821559_640.jpg',
         ]);
 
@@ -141,7 +141,7 @@ class ItemSeeder extends Seeder
             'brand' => 'Apple',
             'price' => 8435,
             'category' => 'photo_audio_video',
-            'img' => './img/blackmagic.jpg',
+            'img' => './img/All/blackmagic-ursa-mini-pro-46k-bluetooth-.jpg',
         ]);
 
         //11
@@ -167,7 +167,7 @@ class ItemSeeder extends Seeder
             'brand' => 'Samsung',
             'price' => 8435,
             'category' => 'photo_audio_video',
-            'img' => './img/gopromax.jpg',
+            'img' => './img/All/media_4309128.jpg',
         ]);
 
         //13
@@ -219,7 +219,7 @@ class ItemSeeder extends Seeder
             'brand' => 'Apple',
             'price' => 1299,
             'category' => 'mobile_phones',
-            'img' => './img/iphone12.jpg',
+            'img' => './img/All/iphonemini23-1280x720.jpg',
         ]);
 
         //17
@@ -286,8 +286,19 @@ class ItemSeeder extends Seeder
             'category' => 'monitors',
             'img' => './img/asus.jpg',
         ]);
+
+        //22
+        DB::table('items')->insert([
+            'title' => 'Setup',
+            'description' => 'Comfortable setup',
+            'rating' => '4',
+            'specs' => 'good',
+            'color' => 'black',
+            'brand' => 'Sony',
+            'price' => 299,
+            'category' => 'photo_audio_video',
+            'img' => './img/slider-setup.jpg',
+        ]);
     }
-
-
 
 }
