@@ -14,6 +14,8 @@ class ProductListController extends Controller
         $page = request('page');
         $color = request('color');
         $brand = request('brand');
+        $pricemin = request('pricemin', 0) - 1;
+        $pricemax = request('pricemax', 99999) + 1;
         $order = request('order');
         $how = request('how');
         if (!(strlen($order) > 0)) {
@@ -28,16 +30,21 @@ class ProductListController extends Controller
 
         $items = DB::table('items')->select('*')
             ->where([['color', 'like', '%' . $color . '%'],
-                    ['brand', 'like', '%' . $brand . '%']])
+                    ['brand', 'like', '%' . $brand . '%'],
+                    ['price', '>', $pricemin],
+                    ['price', '<', $pricemax]])
             ->orderBy($order, $how)->get();
 
         $data = DB::table('items')->select('*')
             ->where([['color', 'like', '%' . $color . '%'],
+                    ['price', '>', $pricemin],
+                    ['price', '<', $pricemax],
                     ['brand', 'like', '%' . $brand . '%']])
             ->orderBy($order, $how)->paginate(9);
 
         $url = url()->full();
-        if (strlen($color) > 0 || strlen($brand) > 0 || strlen($temp) > 0 || strlen($page) > 0) {
+        if (strlen($color) > 0 || strlen($brand) > 0 || strlen($temp) > 0 || strlen($page) > 0
+            || strlen($pricemin > 0)) {
             $url .= "&";
         }
         else {
